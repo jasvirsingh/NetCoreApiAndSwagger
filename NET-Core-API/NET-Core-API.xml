@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NET-Core-API</name>
+    </assembly>
+    <members>
+        <member name="M:NET_Core_API.Controllers.ProductController.Get">
+            <summary>
+            Gets list of all products
+            </summary>
+            <returns>The list of products</returns>
+        </member>
+        <member name="M:NET_Core_API.Controllers.ProductController.Get(System.Int32)">
+            <summary>
+            Gets a specific product
+            </summary>
+            <param name="id">unique value of the product</param>
+            <returns>returns a product object</returns>
+        </member>
+        <member name="M:NET_Core_API.Controllers.ProductController.Post(NET_Core_API.Data.Entities.Product)">
+            <summary>
+            Creates a product
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST api/Product
+                {        
+                 "name": "Cargo Pants",
+                 "description": "Nice Cargo Pants",  
+                  "categories": [
+                         {
+                             "id": 0,
+                             "productID": 0,
+                             "categoryID": 0,
+                             "category" :{
+                                 "name":"Fashion"
+                             }
+                         },
+                         {
+                             "id": 0,
+                             "productID": 0,
+                             "categoryID": 0,
+                             "category":{
+                                 "name":"Street"
+                             }
+                         }
+                    ]
+                }
+            </remarks>
+            <param name="product"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NET_Core_API.Controllers.ProductController.Put(System.Int32,NET_Core_API.Data.Entities.Product)">
+            <summary>
+            Update an exisitng product
+            </summary>
+            <param name="id">unique value of the product</param>
+            <remarks>
+            Sample request:
+            
+                PUT api/Product
+                {
+                 "id": "1",
+                 "name": "Cargo Pants",
+                 "description": "Nice Cargo Pants",  
+                  "categories": [
+                         {
+                             "id": 0,
+                             "productID": 1,
+                             "categoryID": 3,
+                             "category" :{
+                                 "name":"Supplies"
+                             }
+                         },
+                         {
+                             "id": 0,
+                             "productID": 1,
+                             "categoryID": 2,
+                             "category":{
+                                 "name":"Street"
+                             }
+                         }
+                    ]
+                }
+            </remarks>
+            <param name="product">201 OK</param>
+            <returns></returns>
+        </member>
+        <member name="M:NET_Core_API.Controllers.ProductController.Delete(System.Int32)">
+            <summary>
+            Delete a product
+            </summary>
+            <param name="id">unique value of the product</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
